@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Api::V1::DiscountController do
+describe "api/v1/discounts", :type => :api do
   
   before do 
     @discount = build(:discount)

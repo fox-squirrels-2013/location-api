@@ -137,6 +137,7 @@ DEPENDENCIES
   factory_girl_rails
   jquery-rails
   pg
+  rack-test
   rails (= 3.2.14)
   rspec-rails (~> 3.0.0.beta)
   sass-rails (~> 3.2.3)

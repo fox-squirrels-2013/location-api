@@ -1,6 +1,6 @@
 LocationApi::Application.routes.draw do
   namespace :api do
-    name :v1 do
+    namespace :v1 do
       resources :discounts
     end
   end
