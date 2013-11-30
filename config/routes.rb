@@ -1,4 +1,9 @@
 LocationApi::Application.routes.draw do
+  namespace :api do
+    name :v1 do
+      resources :discounts
+    end
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
