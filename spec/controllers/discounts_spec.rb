@@ -1,9 +1,12 @@
 require 'spec_helper'
 
 describe "api/v1/discounts", :type => :api do
-  
+  let(:user) { create_user! }
+  let(:token) { user.authentication_token }
+
   before do 
     @discount = build(:discount)
+    user.permissions.create! (:action => "view", :thing => @discount)
   end
 
 
