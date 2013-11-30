@@ -3,13 +3,13 @@ require 'spec_helper'
 describe Api::V1::DiscountController do
   
   before do 
-    @discount = Factory(:discount)
+    @discount = build(:discount)
   end
 
 
   context "discounts available " do
 
-    let(:url) { "/" }
+    let(:url) { "/index" }
     it "json" do 
       get "#{url}.json"
 
@@ -20,7 +20,7 @@ describe Api::V1::DiscountController do
       discounts = JSON.parse(last_response.body)
 
       discounts.any? do |d|
-        d["discount"]["name"] == "PBR1"
+        d["discount"]["item"] == "PBR1"
       end.should be_true
     end  
   end

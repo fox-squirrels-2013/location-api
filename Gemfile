@@ -14,6 +14,7 @@ group :development, :test do
   gem 'factory_girl_rails'
 end
 
+gem 'rack-test'
 
 # Gems used only for assets and not required
 # in production environments by default.
