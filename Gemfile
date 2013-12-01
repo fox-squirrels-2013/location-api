@@ -2,13 +2,24 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.14'
 
+ruby '2.0.0'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+# gem 'devise'
+gem 'geocoder'
+gem 'pry'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'rspec', github: 'rspec/rspec', branch: '2-0-stable'
+  gem 'rspec-core', github: 'rspec/rspec-core', branch: '2-0-stable'
+  gem 'rspec-mocks', github: 'rspec/rspec-mocks', branch: '2-0-stable'
+  gem 'rspec-expectations', github: 'rspec/rspec-expectations', branch: '2-0-stable'
+  gem 'rspec-rails', github: 'rspec/rspec-rails', branch: '2-0-stable'
   gem 'shoulda-matchers'
   gem 'simplecov'
   gem 'factory_girl_rails'
