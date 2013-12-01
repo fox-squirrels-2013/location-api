@@ -12,6 +12,7 @@ gem 'devise'
 gem 'geocoder'
 gem 'pry'
 
+
 group :development, :test do
   gem 'capybara'
   gem 'capybara-webkit'
@@ -23,6 +24,8 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'simplecov'
   gem 'factory_girl_rails'
+  gem 'guard'
+  gem 'guard-rspec'
 end
 
 gem 'rack-test'
