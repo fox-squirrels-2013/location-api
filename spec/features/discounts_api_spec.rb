@@ -7,7 +7,7 @@ describe 'The discounts API' do
     location = create(:location)
     discount = create(:discount, price: 10)
 
-    visit store_location_discounts_path(discount.store_id, discount.location_id)
+    visit store_location_discounts_path(discount.store, discount.location)
 
     response = JSON.parse(page.body)
  
