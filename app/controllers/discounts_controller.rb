@@ -8,7 +8,7 @@ class DiscountsController < ApplicationController
   def create
     discount = Discount.new params[:discount]
     if discount.save
-      render json: { error: false, discount: discount, location: discount_path(discount)}
+      render json: { error: false, discount: discount, location: location_discount_path(discount.location, discount)}
     else
       render json: { error: true }
     end
