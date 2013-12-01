@@ -1,11 +1,8 @@
 class StoresController < ApplicationController
   def index
-     # save request params in variable
-    #@current_position = params
-    # check radius arounf current position
-    @surrounding_locations = Location.near([37.79235, -122.4061], 1)    
+    @current_position = [params[:latitude].to_f, params[:longitude].to_f]
+    @surrounding_locations = Location.near(@current_position, 3)    
 
-   # discounts = Discount.all.map(&:price)
     render json: { surrounding_locations: @surrounding_locations }
   end
 end  
