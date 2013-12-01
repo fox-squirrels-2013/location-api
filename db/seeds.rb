@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+store = Store.create({name: 'Walgreens'})
+
+locations = Location.create([{store: store, latitude: '37.7923', longitude: '-122.4024', address: '300 Montgomery St, San Francisco, CA'}, {store: store, latitude: '37.7912', longitude: '-122.4007', address: '100 Sansome Street, San Francisco, CA'}, {store: store, latitude: '37.8796', longitude: '-122.2965', address: '1050 Gilman Street Berkeley, CA'}])
+
+discounts = Discount.create([{store: store, location: locations.first, item: 'PBR', price: 10, percentage: 50}])
