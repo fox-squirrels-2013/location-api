@@ -2,16 +2,33 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.14'
 
+ruby '2.0.0'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'devise'
+gem 'geocoder'
+gem 'pry'
+
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'rspec'
+  gem 'rspec-core'
+  gem 'rspec-mocks'
+  gem 'rspec-expectations'
+  gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'simplecov'
+  gem 'factory_girl_rails'
+  gem 'guard'
+  gem 'guard-rspec'
 end
 
+gem 'rack-test'
 
 # Gems used only for assets and not required
 # in production environments by default.
