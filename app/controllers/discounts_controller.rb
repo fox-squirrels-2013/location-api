@@ -1,7 +1,7 @@
 class DiscountsController < ApplicationController
 
   def index
-    discounts = Discount.all
+    discounts = Discount.all.map(&:price)
     render json: { discounts: discounts }
   end
 

@@ -1,13 +1,14 @@
 require 'spec_helper'
-# require 'JSON'
+require 'JSON'
 
-describe 'The discounts API', js: true do
+describe 'The discounts API' do
   it 'lists all discounts in the db' do
-#     discount = create(:discount)
-#     visit discount_path
+    discount = create(:discount, price: 10)
 
-    # response = JSON.parse(page)
+    visit discounts_path
 
-    # expect(response.discount).to include(discount)
+    response = JSON.parse(page.body)
+ 
+    expect(response["discounts"]).to include(discount.price)
   end
 end
