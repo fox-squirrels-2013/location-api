@@ -13,9 +13,9 @@ class Store < ActiveRecord::Base
     discount_locations = find_discount_locations discounts
     discount_stores = find_discount_stores discount_locations
     
-    discount_price = self.find_discount_price discounts
-    percentage = self.find_discount_percentage discounts
-    item = self.find_discounted_item discounts
+    discount_price = find_discount_price discounts
+    percentage = find_discount_percentage discounts
+    item = find_discounted_item discounts
 
     coordinates = discount_locations.map { |discount| [discount.latitude, discount.longitude] }
     address = discount_locations.map(&:address)
