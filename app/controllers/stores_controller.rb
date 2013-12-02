@@ -4,6 +4,6 @@ class StoresController < ApplicationController
 
     results = Store.find_results current_position
 
-    render json: {results: [results]}
+    render json: {results: results}
   end
 end 
