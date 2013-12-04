@@ -6,7 +6,6 @@ describe Store  do
   it { should have_many :discounts }
 
   let(:current_position) { [34.2384723,-123.3259842] }
-  let(:nearby_position) { [34.2384722, -123.3259843] }
   let!(:locations) { create(:location) }
   let!(:discounts) { create(:discount) }
   let!(:stores) { create(:store) }
